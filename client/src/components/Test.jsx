@@ -3,7 +3,7 @@ import { createWalletClient, custom } from "viem";
 import { holesky } from "viem/chains";
 import { addEnsContracts } from "@ensdomains/ensjs";
 import { createSubname } from "@ensdomains/ensjs/wallet";
-import { privateKeyToAddress } from "viem/accounts";
+import { privateKeyToAccount, privateKeyToAddress } from "viem/accounts";
 
 async function caller() {
   const wallet = createWalletClient({
@@ -16,10 +16,11 @@ async function caller() {
   console.log("HELFJSKHJFKLSDFHSKJFSDFHJK");
 
   const hash = await createSubname(wallet, {
-    name: "sub1.ethbrussels.eth",
+    name: "gylman.now.test.ethbrussels.eth",
     owner: "0xEFfeB83B07d69A4a46C13ADb435F493EB9562797",
-    contract: "registry",
+    contract: "nameWrapper",
   });
+
   console.log(hash);
 }
 

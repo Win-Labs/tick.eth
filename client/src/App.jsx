@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./App.css";
 import ConnectButton from "./components/ConnectButton";
 import {
   useAccount,
@@ -11,6 +10,13 @@ import {
 import { normalize } from "viem/ens";
 import { formatAddress } from "@ens-tools/format";
 import Test from "./components/Test";
+import Table from "./components/Table";
+import styled from "styled-components";
+
+const Main = styled.div`
+  width: 100%;
+  height: 100%;
+`;
 
 function App() {
   const name = normalize("ethbrussels.eth");
@@ -23,9 +29,9 @@ function App() {
   });
 
   return (
-    <>
-      <Test />
-      <div>
+    <Main>
+      {/* <Test /> */}
+      {/* <div>
         {ethereum && formatAddress(ethereum)}
         <br />
         {avatar && <img src={avatar} />}
@@ -33,9 +39,10 @@ function App() {
           <span>Twitter: </span>
           <span>{data}</span>
         </div>
-      </div>
-      <ConnectButton />
-    </>
+      </div> */}
+      <Table />
+      {/* <ConnectButton /> */}
+    </Main>
   );
 }
 
