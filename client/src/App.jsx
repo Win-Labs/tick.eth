@@ -10,6 +10,7 @@ import {
 } from "wagmi";
 import { normalize } from "viem/ens";
 import { formatAddress } from "@ens-tools/format";
+import Test from "./components/Test";
 
 function App() {
   const name = normalize("ethbrussels.eth");
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <>
+      <Test />
       <div>
         {ethereum && formatAddress(ethereum)}
         <br />
