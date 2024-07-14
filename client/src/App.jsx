@@ -41,7 +41,7 @@ function App() {
         </div>
       </div> */}
       <Table />
-      {/* <ConnectButton /> */}
+      <ConnectButton />
     </Main>
   );
 }
